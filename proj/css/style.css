@@ -1,29 +1,19 @@
 /* Tools */
-/* Font variables */
-/* Color variables */
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-/* Layout */
 .ul-list-inline li {
   display: inline-block;
 }
 
-/* Wordpress alignment */
+.srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /* Base */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
@@ -438,10 +428,14 @@ a {
 }
 
 body {
-  font-family: "open_sansbold", Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
 }
 
 hr {
@@ -561,6 +555,9 @@ li {
   background: #34444f;
   opacity: .55;
   text-align: center;
+}
+.nav__menu {
+  padding: 10px 0;
 }
 
 .show {

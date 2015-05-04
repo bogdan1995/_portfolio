@@ -9,7 +9,6 @@ var
     jshint = require('gulp-jshint'),
     minifyCss = require('gulp-minify-css'),
     notify = require('gulp-notify'),
-    sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss'),
     useref = require('gulp-useref'),
