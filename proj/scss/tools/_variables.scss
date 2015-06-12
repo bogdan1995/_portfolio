@@ -4,7 +4,7 @@
 
 // Font Stacks
 
-$main-font:  'open_sansbold', Arial, sans-serif;
+$main-font:  'open_sanssemibold', Arial, sans-serif;
 $font-url--google          : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900)';
 
 $font-family--primary      : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,8 +12,7 @@ $font-family--secondary    : 'Helvetica Neue',  Helvetica, Arial, sans-serif;
 $color-link: #fff;
 $color-link-hover: lighten($color-link, 40%);
 
-$dark-blue: #34444f;
-$white: #fff;
+
 // Font Weights
 
 $font-weight--thin         : 100;
@@ -24,9 +23,11 @@ $font-weight--ultra--bold  : 900;
 
 // Descriptive Base Colors
 
-$white    : #fff;
-$black    : #0b0b0b;
-$grey     : #797e83;
+$dark-blue : #34444f;
+$white     : #fff;
+$black     : #0b0b0b;
+$grey      : #797e83;
+$brown     : #a25f2a;
 
 $fountain-blue  : #52bab3;
 $embrald        : #5ece7f;

@@ -10,7 +10,6 @@ var
     minifyCss = require('gulp-minify-css'),
     notify = require('gulp-notify'),
     uglify = require('gulp-uglify'),
-    uncss = require('gulp-uncss'),
     useref = require('gulp-useref'),
     opn = require('opn'),
     wiredep = require('wiredep').stream,
@@ -25,7 +24,7 @@ gulp.task('connect', function () {
         livereload: true,
         port: 8080
     });
-    opn('http://localhost:8080/');
+    //opn('http://localhost:8080/');
 });
 
 gulp.task('css', function() {
@@ -54,17 +53,6 @@ gulp.task('jade', function () {
         .pipe(connect.reload())
         .pipe(notify("Jade done!"));
 });
-
-
-
-// gulp.task('uncss', function() {
-//     return gulp.src('./proj/css/style.css')
-//         .pipe(uncss({
-//             html: glob.sync('./proj/*.html')
-//         }))
-//         .pipe(notify("uncss done!"))
-//         .pipe(gulp.dest('./proj/css'));
-// });
 
 gulp.task('jshint', function () {
     return gulp.src('./proj/js/*.js')

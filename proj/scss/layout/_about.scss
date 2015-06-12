@@ -1,0 +1,87 @@
+// =======================
+// Layout/About
+// =======================
+
+.about {
+  width: 90%;
+  margin: auto;
+
+}
+
+.about__block {
+  margin-bottom: 45px;
+}
+
+// Coding about pics
+
+// end code
+
+.about__text {
+  text-align: center;
+  font-family: 'open_sansregular';
+}
+
+.about__skills-item {
+  color: $dark-blue;
+  margin-bottom: 10px;
+  span {
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+.about__skills-line {
+  background-color: palette(grey, x-ligth);
+
+}
+
+.about__skills-innerLine {
+  height: 4px;
+  background-color: $brown;
+  &_html {
+    width: 80%;
+  }
+  &_css {
+    width: 70%;
+  }
+  &_javascript {
+    width: 65%;
+  }
+  &_php {
+    width: 65%;
+  }
+  &_wordpress {
+    width: 65%;
+  }
+  &_webdesign {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__text {
+    font-size: 24px;
+  }
+  .about__skills-item {
+    span {
+      font-size: 24px;
+    }
+  }
+  .about__block {
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .about {
+    width: 960px;
+  }
+  .about__skills-item {
+    display: inline-block;
+    width: 45%;
+    margin-left: 4%;
+    span {
+      font-size: 28px;
+    }
+  }
+}
