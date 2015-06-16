@@ -10,7 +10,7 @@
   background-size: cover;
   text-align: center;
   display: table;
-  margin-bottom: 50px;
+
 }
 
 .header-text {
@@ -47,9 +47,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .header {
-    margin-bottom: 100px;
-  }
+
   .author-name {
     width: 723px;
     margin: auto;

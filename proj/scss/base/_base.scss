@@ -41,7 +41,7 @@ hr {
     padding: 0;
 }
 
-ul {
+ul, h1 {
   padding: 0;
   margin: 0;
 }
@@ -50,28 +50,53 @@ li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 // Name of block
 .container-name {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 24px;
-  margin: 30px 0;
+  padding: 30px 0;
   &_blue {
     color: $dark-blue;
   }
+  &_white {
+    color: $white;
+  }
+}
+
+.about, .portfolio__block {
+  width: 90%;
+  margin: auto;
+}
+
+.portfolio, .about, .header {
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
+  .header, .about, .portfolio {
+    margin-bottom: 100px;
+  }
   .container-name {
     font-size:30px;
-    margin: 45px;
+    padding: 45px;
   }
 }
 
 @media screen and (min-width: 960px) {
   .container-name {
     font-size:36px;
-    margin: 60px;
+    padding: 60px;
   }
 }
+
+// Main blocks
+
+
+
+

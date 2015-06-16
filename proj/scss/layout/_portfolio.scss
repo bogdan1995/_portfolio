@@ -1,0 +1,115 @@
+// =======================
+// Layout/Portfolio
+// =======================
+
+.portfolio {
+  background: $dark-blue;
+  &__block {
+    padding-bottom: 30px;
+  }
+}
+
+.portfolio__list {
+  &-item {
+    position: relative;
+    margin-bottom: -6px;
+    overflow: hidden;
+  }
+  &-link {
+    display: block;
+    transform: scale(1.1);
+  }
+  margin-bottom: 30px;
+}
+
+.link-name {
+  @include textCenterAbs();
+  bottom: 6px;
+  padding-top: 41%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'helveticaneuecyrultralight';
+  letter-spacing: 5px;
+}
+
+.feedback {
+  &-link {
+    padding: 5px 10px;
+    border: 3px solid $white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: $white;
+      color: $dark-blue;
+    }
+  }
+  text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+  .link-name {
+    display: block;
+    background: rgba($black, .4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__block {
+    padding-bottom: 60px;
+  }
+  .portfolio__list {
+    margin-bottom: 60px;
+    &-link {
+      font-size: 36px;
+    }
+    &-item {
+      margin-bottom: -14px;
+    }
+  }
+  .link-name {
+    bottom: 14px;
+  }
+  .feedback-link {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .link-name {
+    visibility: hidden;
+    background: none;
+    }
+  .portfolio__list-link {
+    transition: all .3s ease-in-out;
+  }
+  .portfolio__list-item {
+//    Plates orientation
+    display: inline-block;
+    width: 33.333333%;
+    &:nth-child(5n), &:nth-child(5n-1) {
+      width: 50%;
+    }
+    margin-left: -5px;
+//
+    &:hover .portfolio__list-link {
+      transform: scale(1.25);
+    }
+    &:hover .link-name {
+      visibility: visible;
+      background: rgba($black, .4);
+    }
+  }
+  .feedback-link {
+    border: 7px solid $white;
+    font-size: 48px;
+  }
+  .portfolio__block {
+    padding-bottom: 90px;
+  }
+  .portfolio__list {
+    margin-bottom: 90px;
+  }
+}
