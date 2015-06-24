@@ -74,3 +74,20 @@ block content
                         .link-name Sitename
             .feedback
                 a(href="#").feedback-link Связаться
+    .form
+        .form__block
+            h1.container-name.container-name_blue Контакты
+            form(method="post")
+                span.input.input--chisato
+                    input.input__field.input__field--chisato(type="text" id="input-1")
+                    label.input__label.input__label--chisato(for="input-1")
+                        span.input__label-content.input__label-content--chisato(data-content="Ваше имя") Ваше имя
+                span.input.input--chisato
+                    input.input__field.input__field--chisato(type="email" id="input-2")
+                    label.input__label.input__label--chisato(for="input-2")
+                        span.input__label-content.input__label-content--chisato(data-content="Ваш email") Ваш email
+                span.input.input--chisato
+                    textarea.input__field.input__field--chisato(id="input-3")
+                    label.input__label.input__label--chisato(for="input-3")
+                        span.input__label-content.input__label-content--chisato(data-content="Ваше сообщение") Ваше сообщение
+                input(type="submit" value="Отправить").input-submit

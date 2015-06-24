@@ -69,17 +69,17 @@ img {
   }
 }
 
-.about, .portfolio__block {
+.about, .portfolio__block, .form {
   width: 90%;
   margin: auto;
 }
 
-.portfolio, .about, .header {
+.portfolio, .about, .header, .form {
   margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
-  .header, .about, .portfolio {
+  .header, .about, .portfolio, .form {
     margin-bottom: 100px;
   }
   .container-name {
