@@ -46,6 +46,8 @@ only screen and (min-width: 400px) and (orientation: landscape) {
   }
   .nav {
     @include textCenterAbs();
+    bottom: auto;
+    height: 30%;
     background: none;
     &__menu {
       text-align: center;
