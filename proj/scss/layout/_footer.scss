@@ -3,10 +3,56 @@
 // =======================
 
 .footer {
-  background: url(/img/footer-bg.png);
+  background: url(/img/footer-bg.png) no-repeat 0 80px;
+  background-attachment: fixed;
 }
 
 .copyright {
   text-align: center;
   color: $white;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.socials {
+  margin-top: 40px;
+  &-item {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    svg {
+      width: 75%;
+      margin-top: -40px;
+      fill: $white;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    &-item {
+      width: 32%;
+      svg {
+        margin-top: 10px;
+      }
+    }
+  }
+  .copyright {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .footer__block {
+    width: 960px;
+  }
+  .socials {
+    margin-top: 0;
+    &-item {
+      width: 16%;
+      svg {
+        margin-top: 10px;
+      }
+    }
+  }
 }

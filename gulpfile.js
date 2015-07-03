@@ -76,7 +76,7 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['./proj/jade/**/*.jade'], ['jade']);
+    //gulp.watch(['./proj/jade/**/*.jade'], ['jade']);
     gulp.watch(['./proj/scss/**/*.scss'], ['css']);
     gulp.watch(['./proj/js/*.js'], ['jshint']);
     gulp.watch(['./bower.json'], ['wiredep']);

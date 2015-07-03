@@ -15,6 +15,12 @@
 .about__text {
   text-align: center;
   font-family: 'open_sansregular';
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .about__skills-item {
