@@ -529,8 +529,7 @@ img {
 }
 /* Layout */
 .footer {
-  background: url(/img/footer-bg.png) no-repeat 0 80px;
-  background-attachment: fixed;
+  background: url(/img/footer-bg.png);
 }
 
 .copyright {
@@ -732,6 +731,21 @@ img {
   margin-bottom: 45px;
 }
 
+.photo {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 75%;
+}
+
+.about__pics-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about__pics-item svg {
+  width: 100%;
+  fill: #f5deb3;
+}
+
 .about__text {
   text-align: center;
   font-family: 'open_sansregular';
@@ -791,6 +805,15 @@ img {
   .about__block {
     margin-bottom: 75px;
   }
+
+  .about__pics-item {
+    display: inline-block;
+    width: 49%;
+  }
+  .about__pics-item_photo {
+    display: block;
+    margin: 0 auto 15px;
+  }
 }
 @media screen and (min-width: 960px) {
   .about {
@@ -804,6 +827,22 @@ img {
   }
   .about__skills-item span {
     font-size: 28px;
+  }
+
+  .about__pics-item {
+    vertical-align: middle;
+    display: inline-block;
+    width: 18%;
+  }
+  .about__pics-item svg {
+    width: 75%;
+  }
+  .about__pics-item_photo {
+    display: inline-block;
+    width: 25%;
+  }
+  .about__pics-item_photo .photo {
+    width: 100%;
   }
 }
 .portfolio {
