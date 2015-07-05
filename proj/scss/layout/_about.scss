@@ -40,9 +40,15 @@
 .about__skills-item {
   color: $dark-blue;
   margin-bottom: 10px;
+
   span {
     margin-bottom: 5px;
     display: block;
+  }
+  &:hover {
+    .about__skills-innerLine_html {
+      width: 80%;
+    }
   }
 }
 
@@ -51,27 +57,34 @@
 
 }
 
+.about__skills__list_animate {
+  .about__skills-innerLine {
+    &_html {
+      width: 80%;
+    }
+    &_css {
+      width: 70%;
+    }
+    &_javascript {
+      width: 65%;
+    }
+    &_php {
+      width: 65%;
+    }
+    &_wordpress {
+      width: 65%;
+    }
+    &_webdesign {
+      width: 50%;
+    }
+  }
+}
+
 .about__skills-innerLine {
   height: 4px;
   background-color: $brown;
-  &_html {
-    width: 80%;
-  }
-  &_css {
-    width: 70%;
-  }
-  &_javascript {
-    width: 65%;
-  }
-  &_php {
-    width: 65%;
-  }
-  &_wordpress {
-    width: 65%;
-  }
-  &_webdesign {
-    width: 50%;
-  }
+  transition: all 1s linear;
+  width: 0;
 }
 
 @media screen and (min-width: 768px) {

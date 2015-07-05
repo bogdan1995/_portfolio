@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Богдан Пономаренко</title>
+  <title>Богдан Пономаренко | Front-End Разработчик</title>
   <!-- build:css css/style.css -->
   <!-- bower:css -->
   <!-- endbower -->
@@ -190,11 +190,11 @@
   <div class="wrapper">
     <div class="nav">
       <ul class="nav__menu">
-        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Обо мне</a>
+        <li class="nav__menu-item"><a href="#" class="nav__menu-link" data-block="about">Обо мне</a>
         </li>
-        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Работы</a>
+        <li class="nav__menu-item"><a href="#" class="nav__menu-link" data-block="portfolio">Работы</a>
         </li>
-        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Контакты</a>
+        <li class="nav__menu-item"><a href="#" class="nav__menu-link" data-block="form">Контакты</a>
         </li>
       </ul>
     </div>
@@ -204,7 +204,19 @@
       <div class="header-text">
         <h1 class="author-name">Богдан Пономаренко</h1>
         <h3 class="author-prof"> front-end разработчик</h3>
+          <div class="scroll-down">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="166 280.5 284.6 231">
+                      <g>
+                          <polygon fill="#FFFFFF"
+                                   points="450.6,384.5 441.4,372.3 308.3,490.1 175.2,372.3 166,384.5 308.3,511.5 	"/>
+                          <polygon fill="#FFFFFF"
+                                   points="450.6,292.7 441.4,280.5 308.3,398.3 175.2,280.5 166,292.7 308.3,419.7 	"/>
+                      </g>
+                  </svg>
+                    <p class="scroll-text">SCROLL!</p>
+          </div>
       </div>
+
     </div>
     <div class="about">
       <div class="about__block">
@@ -313,7 +325,7 @@
             </a>
           </li>
         </ul>
-        <div class="feedback"><a href="#" class="feedback-link">Связаться</a>
+        <div class="feedback"><a href="#" class="feedback-link nav__menu-link" data-block="form">Связаться</a>
         </div>
       </div>
     </div>
@@ -384,6 +396,9 @@
   </div>
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+  <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js js/main.js -->

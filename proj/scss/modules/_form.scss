@@ -206,6 +206,15 @@ textarea.input__field.input__field--chisato {
   color: $dark-blue;
 }
 
+.has-error {
+  background: rgba(red, .5);
+  border-color: red;
+  color: $black;
+  & + label span {
+    color: $black;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .input-submit {
     font-size: 48px;

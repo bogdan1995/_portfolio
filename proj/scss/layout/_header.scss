@@ -10,7 +10,26 @@
   background-size: cover;
   text-align: center;
   display: table;
+  position: relative;
+}
 
+.scroll-down {
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  svg {
+    width: 5%;
+  }
+}
+
+.scroll-text {
+  animation-name: scroll-text;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .header-text {
@@ -47,7 +66,9 @@
 }
 
 @media only screen and (min-width: 768px) {
-
+  .scroll-down {
+    display: block;
+  }
   .author-name {
     width: 723px;
     margin: auto;
@@ -64,3 +85,26 @@
     width: 780px;
   }
 }
+
+// Animtaion
+
+@keyframes scroll {
+  from {
+    bottom: 10%;
+  } 50% {
+    bottom: 5%;
+  } to {
+    bottom: 10%;
+  }
+}
+
+@keyframes scroll-text {
+  from {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+

@@ -589,6 +589,32 @@ img {
   background-size: cover;
   text-align: center;
   display: table;
+  position: relative;
+}
+
+.scroll-down {
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.scroll-down svg {
+  width: 5%;
+}
+
+.scroll-text {
+  -webkit-animation-name: scroll-text;
+  animation-name: scroll-text;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .header-text {
@@ -624,6 +650,10 @@ img {
   }
 }
 @media only screen and (min-width: 768px) {
+  .scroll-down {
+    display: block;
+  }
+
   .author-name {
     width: 723px;
     margin: auto;
@@ -640,9 +670,54 @@ img {
     width: 780px;
   }
 }
+@-webkit-keyframes scroll {
+  from {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 5%;
+  }
+  to {
+    bottom: 10%;
+  }
+}
+@keyframes scroll {
+  from {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 5%;
+  }
+  to {
+    bottom: 10%;
+  }
+}
+@-webkit-keyframes scroll-text {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes scroll-text {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .nav {
+  z-index: 99999;
   position: fixed;
-  top: -114px;
+  top: -128px;
   width: 100%;
   text-transform: uppercase;
   font-family: 'open_sanssemibold';
@@ -661,6 +736,7 @@ img {
   position: fixed;
   top: 20px;
   right: 30px;
+  z-index: 999999;
 }
 
 .show-menu {
@@ -765,32 +841,39 @@ img {
   margin-bottom: 5px;
   display: block;
 }
+.about__skills-item:hover .about__skills-innerLine_html {
+  width: 80%;
+}
 
 .about__skills-line {
   background-color: #d6d7d9;
 }
 
+.about__skills__list_animate .about__skills-innerLine_html {
+  width: 80%;
+}
+.about__skills__list_animate .about__skills-innerLine_css {
+  width: 70%;
+}
+.about__skills__list_animate .about__skills-innerLine_javascript {
+  width: 65%;
+}
+.about__skills__list_animate .about__skills-innerLine_php {
+  width: 65%;
+}
+.about__skills__list_animate .about__skills-innerLine_wordpress {
+  width: 65%;
+}
+.about__skills__list_animate .about__skills-innerLine_webdesign {
+  width: 50%;
+}
+
 .about__skills-innerLine {
   height: 4px;
   background-color: #a25f2a;
-}
-.about__skills-innerLine_html {
-  width: 80%;
-}
-.about__skills-innerLine_css {
-  width: 70%;
-}
-.about__skills-innerLine_javascript {
-  width: 65%;
-}
-.about__skills-innerLine_php {
-  width: 65%;
-}
-.about__skills-innerLine_wordpress {
-  width: 65%;
-}
-.about__skills-innerLine_webdesign {
-  width: 50%;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  width: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1172,6 +1255,15 @@ textarea.input__field.input__field--chisato {
   letter-spacing: 5px;
   font-size: 36px;
   color: #34444f;
+}
+
+.has-error {
+  background: rgba(255, 0, 0, 0.5);
+  border-color: red;
+  color: #0b0b0b;
+}
+.has-error + label span {
+  color: #0b0b0b;
 }
 
 @media only screen and (min-width: 768px) {
