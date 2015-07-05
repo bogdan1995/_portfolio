@@ -1,0 +1,152 @@
+/* line 1, ../sass/ie.scss */
+.popup {
+  background: url(../img/popup.png);
+}
+
+/* line 5, ../sass/ie.scss */
+.header:before, .footer:before {
+  background: url(../img/gradient.png) center;
+  max-width: 100%;
+}
+
+/* line 10, ../sass/ie.scss */
+.contacts-items:first-child {
+  padding: 11px 0 12px 83px;
+  background: #41b9d4;
+}
+/* line 13, ../sass/ie.scss */
+.contacts-items:first-child:hover {
+  padding-left: 40px;
+}
+/* line 15, ../sass/ie.scss */
+.contacts-items:first-child:hover:before {
+  left: 13px;
+}
+/* line 19, ../sass/ie.scss */
+.contacts-items:first-child:before {
+  top: 11px;
+  left: 42px;
+  background: url(../img/sprites.png) 0 -100px;
+  width: 21px;
+  height: 16px;
+}
+
+/* line 28, ../sass/ie.scss */
+.contacts-items:first-child + * {
+  padding: 10px 0 11px 83px;
+  background: #48cbe8;
+}
+/* line 31, ../sass/ie.scss */
+.contacts-items:first-child + *:before {
+  top: 7px;
+  left: 42px;
+  background: url(../img/sprites.png) -25px -100px;
+  width: 19px;
+  height: 21px;
+}
+
+/* line 40, ../sass/ie.scss */
+.contacts-items:first-child + * + * {
+  padding: 8px 0 13px 83px;
+  background: #51daf8;
+}
+/* line 43, ../sass/ie.scss */
+.contacts-items:first-child + * + *:before {
+  top: 8px;
+  left: 39px;
+  background: url(../img/sprites.png) 0 -120px;
+  width: 20px;
+  height: 20px;
+}
+
+/* line 52, ../sass/ie.scss */
+.hover {
+  background: url(../img/hover.png);
+}
+
+/* line 56, ../sass/ie.scss */
+.content-items:first-child:before {
+  position: absolute;
+  top: 0;
+  left: -68px;
+  content: '';
+  background: url(../img/sprites.png) -150px -100px;
+  width: 41px;
+  height: 23px;
+}
+
+/* line 66, ../sass/ie.scss */
+.content-items:first-child + *:before {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  content: '';
+  background: url(../img/sprites.png) -100px -100px;
+  width: 26px;
+  height: 32px;
+}
+
+/* line 77, ../sass/ie.scss */
+.skills li {
+  background: url(../img/skills.png) repeat-x;
+  display: inline-block;
+}
+
+/* line 82, ../sass/ie.scss */
+.skills {
+  display: block;
+  overflow: hidden;
+  width: 200px;
+  float: right;
+}
+
+/* line 88, ../sass/ie.scss */
+.about-items li {
+  background-color: #3BA8C0;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+/* line 94, ../sass/ie.scss */
+.about-items li#html, .about-items li#css, .about-items li#js {
+  margin-bottom: 5px;
+}
+/* line 98, ../sass/ie.scss */
+.about-items li#gulp {
+  padding: 2px 8px;
+}
+/* line 101, ../sass/ie.scss */
+.about-items li#html {
+  padding: 2px 7px;
+}
+/* line 104, ../sass/ie.scss */
+.about-items li#css {
+  padding: 2px 11px;
+}
+/* line 107, ../sass/ie.scss */
+.about-items li#js {
+  padding: 2px 11px;
+}
+/* line 110, ../sass/ie.scss */
+.about-items li#git {
+  padding: 2px 12px 2px 13px;
+}
+/* line 113, ../sass/ie.scss */
+.about-items li span {
+  font-family: proxima_nova_condensedSBd;
+  font-size: 14px;
+  color: #FFF;
+  display: block;
+  z-index: 99;
+}
+
+/* line 122, ../sass/ie.scss */
+input[type="file"] {
+  filter: alpha(opacity=0);
+  z-index: 0;
+}
+
+/* line 127, ../sass/ie.scss */
+.upload-button {
+  z-index: 99999;
+}

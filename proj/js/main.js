@@ -6,11 +6,12 @@ var app = (function () {
             this.setUpListeners();
             this.classie();
             this.waypoint();
+            this.ya();
         },
         setUpListeners: function () {
             $('.show').on('click', this.showMenu);
             $('.nav__menu-link').on('click', this.goToBlock);
-            $('form').submit(this.submitForm).on('keydown', 'input, textarea', app.removeError);;
+            $('form').on('submit', this.submitForm).on('keydown', 'input, textarea', app.removeError);;
             $('#input-3').on('keyup', this.textFilled);
         },
         showMenu: function (e) {
@@ -159,21 +160,28 @@ var app = (function () {
         submitForm: function (e) {
             e.preventDefault();
 
-            var form = $(this),
-                submitBtn = form.find('button[type ="submit"]');
+            var form = $(this);
 
             if (!app.validateForm(form)) return false;
 
             var str = form.serialize();
 
-            // серверная часть
+                    // серверная часть
 
             $.ajax({
                 type: 'POST',
-                url: '',
+                url: '/php/send_mail.php',
                 data: str,
                 success: function(data){
-                    console.log(data);
+                    $('form').remove();
+                    var node = $('<div>', {
+                        text: 'Ваше сообщение успешно отправлено!'
+                    }).css({
+                        'font-family': 'helveticaneuecyrultralight',
+                        'text-transform' : 'uppercase',
+                        'text-align' : 'center',
+                        'font-size' : '34px'
+                    }).insertAfter('.form__block .container-name');
                 }
             })
         },
@@ -217,6 +225,33 @@ var app = (function () {
         },
         removeError : function () {
             $(this).removeClass('has-error');
+        },
+        ya: function () {
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter31273938 = new Ya.Metrika({
+                            id:31273938,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true,
+                            webvisor:true,
+                            trackHash:true
+                        });
+                    } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
         }
     }
 })();
