@@ -170,7 +170,7 @@ var app = (function () {
 
             $.ajax({
                 type: 'POST',
-                url: '/php/send_mail.php',
+                url: 'php/send_mail.php',
                 data: str,
                 success: function(data){
                     $('form').remove();

@@ -1,5 +1,7 @@
 .idea
 proj/bower_components
+proj/.idea
+proj/*.db
 node_modules
 dist
 .DS_Store
