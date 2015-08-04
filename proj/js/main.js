@@ -170,7 +170,11 @@ var app = (function () {
 
             $.ajax({
                 type: 'POST',
+<<<<<<< HEAD
                 url: 'php/send_mail.php',
+=======
+                url: '/php/send_mail.php',
+>>>>>>> dc34042acd8642760c0962aefaf7ae5c2bce30af
                 data: str,
                 success: function(data){
                     $('form').remove();
